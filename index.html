@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<!-- saved from url=(0024)https://si.codingia.com/ -->
+<html lang="es"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>INGLÉS - TEST</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: #f2f4f8;
+      color: #333;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      min-height: 100vh;
+    }
+
+    .card {
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+      padding: 1.5rem;
+      margin: 1rem;
+      width: 100%;
+      max-width: 500px;
+    }
+
+    h2 {
+      font-size: 1.1rem;
+      margin-bottom: 1.2rem;
+    }
+
+    .option {
+      background: #f7f7f7;
+      border-radius: 8px;
+      padding: 0.8rem 1rem;
+      margin-bottom: 0.8rem;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      transition: background 0.2s ease;
+    }
+
+    .option:hover {
+      background: #eaeaea;
+    }
+
+    .option input {
+      margin-right: 0.5rem;
+      transform: scale(1.2);
+    }
+
+    button {
+      width: 100%;
+      padding: 1rem;
+      background: #007bff;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      font-size: 1rem;
+      margin-top: 1rem;
+      cursor: pointer;
+      transition: background 0.2s ease;
+    }
+
+    button:hover {
+      background: #0056b3;
+    }
+
+    #resultado {
+      margin-top: 1rem;
+      font-weight: bold;
+      font-size: 1rem;
+      text-align: center;
+    }
+
+    #resultado.correcto {
+      color: green;
+    }
+
+    #resultado.incorrecto {
+      color: red;
+    }
+
+    .estadisticas {
+      margin-top: 1.5rem;
+      font-size: 0.95rem;
+      color: #555;
+      text-align: center;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="card">
+    <h2 id="pregunta">Selecciona la palabra que se corresponde con el fonema semivocálico /j/:</h2>
+    <div id="opciones">
+    <label class="option">
+      <input type="radio" name="opcion" value="ambas son correctas."> ambas son correctas.
+    </label>
+  
+    <label class="option">
+      <input type="radio" name="opcion" value="jail"> jail
+    </label>
+  
+    <label class="option">
+      <input type="radio" name="opcion" value="Yale"> Yale
+    </label>
+  </div>
+    <button onclick="siguiente()" style="display: inline-block;">Corregir</button>
+    <div id="resultado"></div>
+    <div class="estadisticas" id="estadisticas">✅ Aciertos: 3 | ❌ Fallos: 3 | 🎯 Porcentaje: 50% | 📋 Total: 89 preguntas</div>
+  </div>
+
+  <script>
+    let totalPreguntasTotales = 0;
+    let preguntasOriginales = [];
+    let preguntas = [];
+    let falladas = [];
+    let index = 0;
+    let repeticionesFallos = {};
+    let aciertos = 0;
+    let totalRespondidas = 0;
+
+    function normalizar(texto) {
+      return texto.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "").trim();
+    }
+
+    function mezclar(array) {
+      for (let i = array.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [array[i], array[j]] = [array[j], array[i]];
+      }
+    }
+
+    function actualizarEstadisticas() {
+  const porcentaje = totalRespondidas > 0 ? Math.round((aciertos / totalRespondidas) * 100) : 0;
+  document.getElementById("estadisticas").innerText =
+    `✅ Aciertos: ${aciertos} | ❌ Fallos: ${totalRespondidas - aciertos} | 🎯 Porcentaje: ${porcentaje}% | 📋 Total: ${totalPreguntasTotales} preguntas`;
+}
+
+    function guardarProgreso() {
+      const estado = {
+        preguntas,
+        falladas,
+        index,
+        repeticionesFallos,
+        aciertos,
+        totalRespondidas
+      };
+      localStorage.setItem("testSQL", JSON.stringify(estado));
+    }
+
+    function cargarProgreso() {
+      const guardado = localStorage.getItem("testSQL");
+      if (!guardado) return false;
+
+      try {
+        const estado = JSON.parse(guardado);
+        preguntas = estado.preguntas;
+        falladas = estado.falladas;
+        index = estado.index;
+        repeticionesFallos = estado.repeticionesFallos;
+        aciertos = estado.aciertos;
+        totalRespondidas = estado.totalRespondidas;
+        return true;
+      } catch {
+        return false;
+      }
+    }
+
+    function cargarPregunta() {
+      if (index >= preguntas.length) {
+        if (falladas.length > 0) {
+          preguntas = falladas.flatMap(p => Array((repeticionesFallos[p.pregunta] || 1) + 1).fill(p));
+          mezclar(preguntas);
+          falladas = [];
+          index = 0;
+          document.getElementById("resultado").innerText = "¡Repasemos las que fallaste!";
+          document.getElementById("resultado").className = "";
+        } else {
+          document.getElementById("pregunta").innerText = "🎉 ¡Test finalizado!";
+          document.getElementById("opciones").innerHTML = "";
+          document.querySelector("button").style.display = "none";
+          document.getElementById("resultado").innerText = "Buen trabajo.";
+          localStorage.removeItem("testSQL");
+          actualizarEstadisticas();
+          return;
+        }
+      }
+
+      const p = preguntas[index];
+      document.getElementById("pregunta").innerText = p.pregunta;
+
+      const opcionesMezcladas = [...p.opciones];
+      mezclar(opcionesMezcladas); // 🌀 Mezcla el orden de las opciones
+
+      document.getElementById("opciones").innerHTML = opcionesMezcladas.map(opcion => `
+    <label class="option">
+      <input type="radio" name="opcion" value="${opcion}"/> ${opcion}
+    </label>
+  `).join('');
+
+      document.querySelector("button").style.display = "inline-block";
+      document.getElementById("resultado").innerText = "";
+      const btn = document.querySelector("button");
+      btn.style.display = "inline-block";
+      btn.innerText = "Corregir";
+      btn.disabled = false;
+      estadoBoton = "corregir";
+    }
+
+
+    let estadoBoton = "corregir"; // "corregir" o "siguiente"
+
+    function siguiente() {
+      const btn = document.querySelector("button");
+
+      if (estadoBoton === "corregir") {
+        const seleccionada = document.querySelector('input[name="opcion"]:checked');
+        if (!seleccionada) {
+          alert("Selecciona una opción.");
+          return;
+        }
+
+        const respuesta = seleccionada.value;
+        const correcta = preguntas[index].respuesta;
+        const normalizadaCorrecta = normalizar(correcta);
+        const normalizadaRespuesta = normalizar(respuesta);
+
+        totalRespondidas++;
+
+        if (normalizadaCorrecta === normalizadaRespuesta) {
+          aciertos++;
+          document.getElementById("resultado").innerText = "✅ Correcto";
+          document.getElementById("resultado").className = "correcto";
+        } else {
+          document.getElementById("resultado").innerText = `❌ Incorrecto. Era: ${correcta}`;
+          document.getElementById("resultado").className = "incorrecto";
+          if (!falladas.some(p => p.pregunta === preguntas[index].pregunta)) {
+            falladas.push(preguntas[index]);
+            repeticionesFallos[preguntas[index].pregunta] = 1;
+          } else {
+            repeticionesFallos[preguntas[index].pregunta]++;
+          }
+        }
+
+        actualizarEstadisticas();
+        guardarProgreso();
+
+        btn.innerText = "Siguiente";
+        estadoBoton = "siguiente";
+
+        // Desactiva inputs para evitar cambiar de opción tras corregir
+        document.querySelectorAll('input[name="opcion"]').forEach(input => input.disabled = true);
+
+      } else if (estadoBoton === "siguiente") {
+        index++;
+        cargarPregunta();
+      }
+    }
+
+   async function iniciarTest() {
+  try {
+    const res = await fetch("preguntas.json");
+    preguntasOriginales = await res.json();
+    totalPreguntasTotales = preguntasOriginales.length;
+
+    const guardado = localStorage.getItem("testSQL");
+    if (guardado) {
+      const estado = JSON.parse(guardado);
+
+      // Cargamos progreso anterior
+      preguntas = estado.preguntas;
+      falladas = estado.falladas;
+      index = estado.index;
+      repeticionesFallos = estado.repeticionesFallos;
+      aciertos = estado.aciertos;
+      totalRespondidas = estado.totalRespondidas;
+
+      // Añadir nuevas preguntas si hay más en el JSON
+      const todasGuardadas = [...preguntas, ...falladas].map(p => p.pregunta);
+      const nuevas = preguntasOriginales.filter(p => !todasGuardadas.includes(p.pregunta));
+
+      if (nuevas.length > 0) {
+        preguntas = preguntas.concat(nuevas);
+        mezclar(preguntas); // Opcional: vuelve a mezclar para no poner nuevas al final
+      }
+
+    } else {
+      preguntas = [...preguntasOriginales];
+      mezclar(preguntas);
+    }
+
+    cargarPregunta();
+    actualizarEstadisticas();
+  } catch (error) {
+    document.getElementById("pregunta").innerText = "Error al cargar preguntas.json";
+    console.error(error);
+  }
+}
+    iniciarTest();
+  </script>
+
+
+</body></html>

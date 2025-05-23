@@ -1,0 +1,536 @@
+[
+  {
+    "pregunta": "Selecciona la palabra que se corresponde con el fonema semivocálico /j/:",
+    "respuesta": "ambas son correctas.",
+    "opciones": [ "jail", "ambas son correctas.", "Yale" ]
+  },
+  {
+    "pregunta": "Rachel exchanged her old laptop for a ___; it was much easier to carry around.",
+    "respuesta": "tablet",
+    "opciones": [ "tablet", "fuse", "television" ]
+  },
+  {
+    "pregunta": "If Peter ______ more, he would have passed the exam.",
+    "respuesta": "had studied",
+    "opciones": [ "had studied", "has study", "has studied" ]
+  },
+  {
+    "pregunta": "If I_____you, I would go to the party.",
+    "respuesta": "were",
+    "opciones": [ "had", "were", "was" ]
+  },
+  {
+    "pregunta": "_______you_____ to the park if it doesn’t rain?",
+    "respuesta": "Will/go",
+    "opciones": [ "Might/went", "Will/go", "Did/go" ]
+  },
+  {
+    "pregunta": "Nothing has changed ___ my place of residence.",
+    "respuesta": "except",
+    "opciones": [ "likewise", "however", "except" ]
+  },
+  {
+    "pregunta": "¿Cuál de las siguientes palabras se pronuncia con el sonido consonántico /k/?",
+    "respuesta": "Ambas son correctas.",
+    "opciones": [ "Ambas son correctas.", "Cake.", "Quiz." ]
+  },
+  {
+    "pregunta": "If we miss the plane, we ______ by bus.",
+    "respuesta": "will go",
+    "opciones": [ "might be", "had to go", "will go" ]
+  },
+  {
+    "pregunta": "When does schwa sound occurs?",
+    "respuesta": "Unstressed syllables in multi-syllable words and reduced vowel sound of function words.",
+    "opciones": [
+      "Only reduced vowel sound of function words.",
+      "Only unstressed syllables in multi-syllable words.",
+      "Unstressed syllables in multi-syllable words and reduced vowel sound of function words."
+    ]
+  },
+  {
+    "pregunta": "If Anna was taller, she _____ heels so much.",
+    "respuesta": "wouldn’t wear",
+    "opciones": [ "have to wear", "wouldn’t wear", "must wear" ]
+  },
+  {
+    "pregunta": "If I______you, I would talk to her.",
+    "respuesta": "were",
+    "opciones": [ "were", "was", "has" ]
+  },
+  {
+    "pregunta": "Indica cual de las siguientes palabras es homófona de 'hear':",
+    "respuesta": "here.",
+    "opciones": [ "here.", "this.", "there." ]
+  },
+  {
+    "pregunta": "Everybody looked at the ___ as the movie started.",
+    "respuesta": "screen.",
+    "opciones": [ "database", "mouse", "screen." ]
+  },
+  {
+    "pregunta": "Laura works in a shop ___ in a factory.",
+    "respuesta": "as well as",
+    "opciones": [ "but", "as well as", "in addition" ]
+  },
+  {
+    "pregunta": "Direct style: “Where do you live?”.",
+    "respuesta": "Indirect style: She asked me where I lived.",
+    "opciones": [
+      "Indirect style: She asked me where I lived.",
+      "Indirect style: She said me where I lived.",
+      "Indirect style: She said me if I lived."
+    ]
+  },
+  {
+    "pregunta": "Direct style: “Be quick!”.",
+    "respuesta": "Indirect style: She ordered me to be quick.",
+    "opciones": [
+      "Indirect style: She said me to be quick.",
+      "Indirect style: She ordered me be quick.",
+      "Indirect style: She ordered me to be quick."
+    ]
+  },
+  {
+    "pregunta": "Direct style: “She got married last year”",
+    "respuesta": "Indirect style: She told me that she had got married the previous year.",
+    "opciones": [
+      "Indirect style: She said she was married the previous year.",
+      "Indirect style: She said me that she had got married the previous year.",
+      "Indirect style: She told me that she had got married the previous year."
+    ]
+  },
+  {
+    "pregunta": "When you switch your tablet ___, you see a red light.",
+    "respuesta": "on",
+    "opciones": [ "with", "on", "up" ]
+  },
+  {
+    "pregunta": "It was getting dark, so Ann ___ the light on.",
+    "respuesta": "switched.",
+    "opciones": [ "switched.", "off", "ninguna es correcta." ]
+  },
+  {
+    "pregunta": "He___in the television and switched it on.",
+    "respuesta": "plugged",
+    "opciones": [ "ambas son correctas", "switched", "plugged" ]
+  },
+  {
+    "pregunta": "Direct style: “Don’t do it!”.",
+    "respuesta": "Indirect style: She ordered me not to do it.",
+    "opciones": [
+      "Indirect style: She told me to do it.",
+      "Indirect style: She told me do it",
+      "Indirect style: She ordered me not to do it."
+    ]
+  },
+  {
+    "pregunta": "Una de las principales diferencias entre el inglés británico y el inglés americano es:",
+    "respuesta": "las diferencias en la pronunciación de las semivocales.",
+    "opciones": [
+      "no existen diferentes en el aspecto de la pronunciación de las semivocales.",
+      "las diferencias en la pronunciación de las semivocales.",
+      "las diferencias en la pronunciación del sonido consonántico /v/."
+    ]
+  },
+  {
+    "pregunta": "But ____ the life in Paris is pleasant and relaxed.",
+    "respuesta": "apart from that",
+    "opciones": [ "apart from that", "likewise", "but" ]
+  },
+  {
+    "pregunta": "The user entered an invalid ___.",
+    "respuesta": "password.",
+    "opciones": [ "password.", "log on.", "reply." ]
+  },
+  {
+    "pregunta": "Check your inbox; I just sent you an important ___.",
+    "respuesta": "email.",
+    "opciones": [ "password.", "inbox.", "email." ]
+  },
+  {
+    "pregunta": "I am writing to complain_____the poor service I have received_____your sales assistant.",
+    "respuesta": "about/from",
+    "opciones": [ "for/from", "about/from", "to/at" ]
+  },
+  {
+    "pregunta": "Choose the correct form:",
+    "respuesta": "in summer.",
+    "opciones": [ "at summer.", "on summer.", "in summer." ]
+  },
+  {
+    "pregunta": "_______ to the administrator account that you will use to reset the forgotten password.",
+    "respuesta": "Log on",
+    "opciones": [ "Log on", "Reply", "Password" ]
+  },
+  {
+    "pregunta": "I have ___my work to this email.",
+    "respuesta": "attached",
+    "opciones": [ "inbox", "email", "attached" ]
+  },
+  {
+    "pregunta": "My brother bought a new car last week.",
+    "respuesta": "A new car was bought by my brother last week.",
+    "opciones": [
+      "A new car bought my brother.",
+      "A new car buy my brother.",
+      "A new car was bought by my brother last week."
+    ]
+  },
+  {
+    "pregunta": "Ella está casada con un periodista famoso.",
+    "respuesta": "She is married to a famous journalist.",
+    "opciones": [
+      "She is married at a famous journalist.",
+      "She is married to a famous journalist.",
+      "She is married with a famous journalist."
+    ]
+  },
+  {
+    "pregunta": "I would love ___ for dinner tonight.",
+    "respuesta": "to go out",
+    "opciones": [ "to go out", "going", "go" ]
+  },
+  {
+    "pregunta": "I like ___ my homework on Sunday mornings.",
+    "respuesta": "Ambas son correctas.",
+    "opciones": [ "Ambas son correctas.", "doing", "to do" ]
+  },
+  {
+    "pregunta": "Selecciona el sonido semiconsonántico que se corresponde con la palabra 'you':",
+    "respuesta": "/j/",
+    "opciones": [ "/j/", "Ninguna es correcta.", "/w/" ]
+  },
+  {
+    "pregunta": "I love____clothes on sales.",
+    "respuesta": "buying",
+    "opciones": [ "to buy", "buing", "buying" ]
+  },
+  {
+    "pregunta": "I hate ____ my bedroom.",
+    "respuesta": "tidying",
+    "opciones": [ "tiding", "tidying", "to tidy" ]
+  },
+  {
+    "pregunta": "Selecciona el sonido semiconsonántico que se corresponde con la palabra 'jale':",
+    "respuesta": "Ninguna es correcta.",
+    "opciones": [ "/w/", "Ninguna es correcta.", "/j/" ]
+  },
+  {
+    "pregunta": "That restaurant ___ be very good. It's always empty.",
+    "respuesta": "can't",
+    "opciones": [ "can't", "have to", "must" ]
+  },
+  {
+    "pregunta": "He_____ be at the office, he starts at half past nine.",
+    "respuesta": "must",
+    "opciones": [ "will", "must", "to" ]
+  },
+  {
+    "pregunta": "I _____be studying the whole weekend. I’ve got an exam next Monday.",
+    "respuesta": "will",
+    "opciones": [ "going", "will", "would" ]
+  },
+  {
+    "pregunta": "Countries ____United States and Russia have competed in the past.",
+    "respuesta": "such as",
+    "opciones": [ "such as", "for instance", "for example" ]
+  },
+  {
+    "pregunta": "I studied for the exam, ___ I don't think I did well.",
+    "respuesta": "but",
+    "opciones": [ "likewise", "but", "except" ]
+  },
+  {
+    "pregunta": "I am plugging my ___ into an outlet to charge it.",
+    "respuesta": "laptop",
+    "opciones": [ "fuse", "television", "laptop" ]
+  },
+  {
+    "pregunta": "¿Cuál de las siguientes palabras se pronuncia con el sonido consonántico /h/?",
+    "respuesta": "House.",
+    "opciones": [ "House.", "Chat.", "Children." ]
+  },
+  {
+    "pregunta": "I have made a digital copy of the document using a ___.",
+    "respuesta": "scanner",
+    "opciones": [ "plug", "hairdryer", "scanner" ]
+  },
+  {
+    "pregunta": "If you_____me, I would_____it.",
+    "respuesta": "had asked/have done",
+    "opciones": [ "ask/had", "asked/has", "had asked/have done" ]
+  },
+  {
+    "pregunta": "An essay is:",
+    "respuesta": "a short, formal piece of writing that deals with a single topic.",
+    "opciones": [
+      "a short, formal piece of writing that deals with a single topic.",
+      "to explain, in a detailed way, what people, places or objects are like.",
+      "a spoken conversation that includes at least two characters."
+    ]
+  },
+  {
+    "pregunta": "If I ______the lottery, I would travel around the world.",
+    "respuesta": "won",
+    "opciones": [ "win", "would win", "won" ]
+  },
+  {
+    "pregunta": "If he ______better English, he would move to London.",
+    "respuesta": "spoke",
+    "opciones": [ "spoke", "speak", "speaks" ]
+  },
+  {
+    "pregunta": "¿Cuál de las siguientes palabras se pronuncia con el sonido consonántico /t/?",
+    "respuesta": "Tea.",
+    "opciones": [ "The.", "Thefts.", "Tea." ]
+  },
+  {
+    "pregunta": "I need a ___ to recharge my phone's battery.",
+    "respuesta": "plug",
+    "opciones": [ "plug", "toaster", "Ninguna es correcta" ]
+  },
+  {
+    "pregunta": "The property has large terraces, ___ to a solarium.",
+    "respuesta": "in addition",
+    "opciones": [ "also", "in addition", "moreover" ]
+  },
+  {
+    "pregunta": "The dialogue is:",
+    "respuesta": "a spoken conversation that includes at least two characters.",
+    "opciones": [
+      "to explain, in a detailed way, what people, places or objects are like.",
+      "a spoken conversation that includes at least two characters.",
+      "a short, formal piece of writing that deals with a single topic."
+    ]
+  },
+  {
+    "pregunta": "En la lengua inglesa existen palabras homófonas, que son:",
+    "respuesta": "palabras que se escriben y tienen significados diferentes, pero suenan igual.",
+    "opciones": [
+      "palabras que se escriben y tienen significados diferentes, pero suenan igual.",
+      "palabras que, teniendo distintos grafemas, sus significantes son iguales, y por supuesto, su significado también.",
+      "palabras que, teniendo los mismos grafemas, sus significantes son distintos, pero su significado es el mismo."
+    ]
+  },
+  {
+    "pregunta": "Direct style: “I’ll come and help you at twelve”.",
+    "respuesta": "Indirect style: She told me that she would come and help me at twelve that day.",
+    "opciones": [
+      "Indirect style: She told me that she would come and help me at twelve that day.",
+      "Indirect style: She said me that she came and help me at twelve that day.",
+      "Indirect style: She told me that she came and help me at twelve that day."
+    ]
+  },
+  {
+    "pregunta": "Indica cual de las siguientes palabras es homófona de 'ate':",
+    "respuesta": "eight.",
+    "opciones": [ "eat.", "eight.", "eaten." ]
+  },
+  {
+    "pregunta": "Indica cual de las siguientes palabras es homófona de 'marry':",
+    "respuesta": "merry.",
+    "opciones": [ "merry.", "Mary.", "married." ]
+  },
+  {
+    "pregunta": "Direct style: “We went to the cinema and then to a Chinese restaurant”.",
+    "respuesta": "Indirect style: She said that they had gone to the cinema and then to a Chinese restaurant.",
+    "opciones": [
+      "Indirect style: She ordered that they gone to the cinema and then to a Chinese restaurant.",
+      "Indirect style: She said that they had gone to the cinema and then to a Chinese restaurant.",
+      "Indirect style: She said that they gone to the cinema and then to a Chinese restaurant."
+    ]
+  },
+  {
+    "pregunta": "Direct Style: “Please get me a cup of tea”.",
+    "respuesta": "Indirect style: She asked me to get her a cup of tea.",
+    "opciones": [
+      "Indirect Style: She asked to please get her a cup of tea.",
+      "Indirect style: She asked me get her a cup of tea.",
+      "Indirect style: She asked me to get her a cup of tea."
+    ]
+  },
+  {
+    "pregunta": "En la lengua inglesa existen palabras homógrafas, que son:",
+    "respuesta": "palabras que se escriben del mismo modo pero cuyos significados son distintos.",
+    "opciones": [
+      "palabras que, teniendo los mismos grafemas, sus significantes son distintos, pero su significado es el mismo.",
+      "palabras que se escriben del mismo modo pero cuyos significados son distintos.",
+      "palabras que, teniendo distintos grafemas, sus significantes son iguales, y por supuesto, su significado también."
+    ]
+  },
+  {
+    "pregunta": "Direct style: “Could you explain number four, please?”.",
+    "respuesta": "Indirect style: She asked if I please could explain number four.",
+    "opciones": [
+      "Indirect style: She asked if I please could explain number four.",
+      "Indirect style: She ordered if I please could explain number four.",
+      "Indirect style: She claim me if I please could explain number four."
+    ]
+  },
+  {
+    "pregunta": "What is one official language in India?",
+    "respuesta": "English is an official language in India.",
+    "opciones": [
+      "English is an official language in India.",
+      "Both are incorrect.",
+      "French is the official language in India."
+    ]
+  },
+  {
+    "pregunta": "Sharon está muy contenta con su nuevo móvil.",
+    "respuesta": "Sharon is very pleased with her new mobile.",
+    "opciones": [
+      "Sharon is very pleased for her new mobile.",
+      "Sharon is very pleased with her new mobile.",
+      "Sharon is very happy to her new mobile."
+    ]
+  },
+  {
+    "pregunta": "The passive voice is used to:",
+    "respuesta": "give more importance to the object.",
+    "opciones": [
+      "both are correct.",
+      "give more importance to the object.",
+      "give more importance to the subject."
+    ]
+  },
+  {
+    "pregunta": "'I am writing____relation____the job vacancy'.",
+    "respuesta": "in/to",
+    "opciones": [ "in/to", "to/at", "on/with" ]
+  },
+  {
+    "pregunta": "El inglés americano tiende a:",
+    "respuesta": "no doblar consonantes en los casos en los que el inglés británico las dobla.",
+    "opciones": [
+      "no tener diptongos.",
+      "no doblar consonantes en los casos en los que el inglés británico las dobla.",
+      "no escribir con mayúsculas al inicio de las oraciones."
+    ]
+  },
+  {
+    "pregunta": "Estoy harto de mi jefe.",
+    "respuesta": "I am fed up with my boss.",
+    "opciones": [
+      "I am hungry from my boss.",
+      "I am fed up with my boss.",
+      "I am upset to my boss."
+    ]
+  },
+  {
+    "pregunta": "Es una característica del inglés americano:",
+    "respuesta": "haber convertido los pasados de los verbos irregulares en regulares.",
+    "opciones": [
+      "pronunciar el sonido consonántico /f/ de manera diferente.",
+      "haber convertido los pasados de los verbos irregulares en regulares.",
+      "los verbos irregulares no pueden convertirse en regulares ni si quiera por el uso del habla."
+    ]
+  },
+  {
+    "pregunta": "En cuanto al cambio en la escritura de los finales de palabras, podemos decir que:",
+    "respuesta": "palabras que en inglés británico acaban en '-tre' el inglés americano las acaba en '-ter'.",
+    "opciones": [
+      "En inglés americano no existe el fonema /z/.",
+      "en inglés americano no se pronuncian las 'eses' del final de las palabras.",
+      "palabras que en inglés británico acaban en '-tre' el inglés americano las acaba en '-ter'."
+    ]
+  },
+  {
+    "pregunta": "Estoy muy unida a mi hermana.",
+    "respuesta": "I am very close to my sister.",
+    "opciones": [
+      "I am very near with my sister.",
+      "I am very close to my sister.",
+      "I am very near to my sister."
+    ]
+  },
+  {
+    "pregunta": "Check your ___; I just sent you an important email.",
+    "respuesta": "inbox",
+    "opciones": [ "username", "password", "inbox" ]
+  },
+  {
+    "pregunta": "I _____call my teacher, I have a huge doubt.",
+    "respuesta": "have to",
+    "opciones": [ "have to", "should to", "has to" ]
+  },
+  {
+    "pregunta": "___ rumors I've heard, he was fired for stealing from the company.",
+    "respuesta": "According to",
+    "opciones": [ "For instance", "For example", "According to" ]
+  },
+  {
+    "pregunta": "Selecciona la palabra que se corresponde con el fonema semivocálico /w/:",
+    "respuesta": "ambas son correctas.",
+    "opciones": [ "wool.", "ambas son correctas.", "quiet." ]
+  },
+  {
+    "pregunta": "You've been travelling all day. You ___ be very tired.",
+    "respuesta": "must",
+    "opciones": [ "must", "can't", "couldn't" ]
+  },
+  {
+    "pregunta": "Formal letters are used for:",
+    "respuesta": "formal communications.",
+    "opciones": [
+      "formal communications.",
+      "Both are correct.",
+      "personal communications with friends or relatives."
+    ]
+  },
+  {
+    "pregunta": "You_____study harder if you want to pass the exam.",
+    "respuesta": "should",
+    "opciones": [ "can't", "would", "should" ]
+  },
+  {
+    "pregunta": "When I was fifteen, I_____run for an hour without stopping.",
+    "respuesta": "could",
+    "opciones": [ "could", "can", "will" ]
+  },
+  {
+    "pregunta": "You____smoke here. It is forbidden.",
+    "respuesta": "can't",
+    "opciones": [ "should", "can't", "can" ]
+  },
+  {
+    "pregunta": "I would hate ____the summer in Seville.",
+    "respuesta": "to spend",
+    "opciones": [ "to spend", "spending", "sppending" ]
+  },
+  {
+    "pregunta": "He answered the ___ when it was ringing.",
+    "respuesta": "phone",
+    "opciones": [ "scanner", "television", "phone" ]
+  },
+  {
+    "pregunta": "The sound “B” is very similar to:",
+    "respuesta": "“P”.",
+    "opciones": [ "“P”.", "“F”.", "“V”." ]
+  },
+  {
+    "pregunta": "Click on print and your document should come out of the ___.",
+    "respuesta": "printer.",
+    "opciones": [ "minguna es correcta.", "printer.", "mouse." ]
+  },
+  {
+    "pregunta": "Direct style: “I’m leaving tomorrow”.",
+    "respuesta": "Indirect style: She said that she was leaving the following day.",
+    "opciones": [
+      "Indirect style: She said she was leaving today.",
+      "Indirect style: She said that she was leaving the following day.",
+      "Indirect style: She said me that she was leaving the following day."
+    ]
+  },
+  {
+    "pregunta": "Elsa is not here and, ___, she can say nothing.",
+    "respuesta": "consequently",
+    "opciones": [ "but", "and", "consequently" ]
+  },
+  {
+    "pregunta": "He likes______early in the morning.",
+    "respuesta": "getting up",
+    "opciones": [ "geting up", "getting up", "get up" ]
+  }
+]
