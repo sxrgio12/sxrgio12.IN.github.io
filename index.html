@@ -1,9 +1,9 @@
-<!DOCTYPE html>
-<!-- saved from url=(0024)https://si.codingia.com/ -->
-<html lang="es"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-  
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>INGLÉS - TEST</title>
+  <title>PROGRAMACIÓN - CODINGIA</title>
   <style>
     * {
       box-sizing: border-box;
@@ -94,219 +94,848 @@
       color: #555;
       text-align: center;
     }
+
+    .question-item {
+      margin-bottom: 1.5rem;
+      padding-bottom: 1rem;
+      border-bottom: 1px solid #eee;
+    }
+
+    .question-item h3 {
+      font-size: 1rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .question-item ul {
+      list-style: none;
+      padding-left: 0;
+    }
+
+    .question-item li {
+      padding: 0.3rem 0.5rem;
+      border-radius: 4px;
+    }
+
+    .question-item li.correct {
+      background: #d4edda;
+    }
+
+    /* verde suave */
+    .question-item li.hidden {
+      display: none;
+    }
+
+    .hidden {
+      display: none !important;
+    }
+
+    #reiniciar {
+      background: #dc3545;
+      margin-top: 0.5rem;
+    }
+
+    #reiniciar:hover {
+      background: #a71d2a;
+    }
   </style>
 </head>
 
 <body>
-  <div class="card">
-    <h2 id="pregunta">Selecciona la palabra que se corresponde con el fonema semivocálico /j/:</h2>
-    <div id="opciones">
-    <label class="option">
-      <input type="radio" name="opcion" value="ambas son correctas."> ambas son correctas.
-    </label>
-  
-    <label class="option">
-      <input type="radio" name="opcion" value="jail"> jail
-    </label>
-  
-    <label class="option">
-      <input type="radio" name="opcion" value="Yale"> Yale
-    </label>
+  <div style="display:flex; flex-direction: column">
+    <div class="card">
+     <h2 id="pregunta">¿Cuál de las siguientes palabras se pronuncia con el sonido consonántico /h/?</h2>
+            <div id="opciones"><label class="option"><input type="radio" name="opcion" value="" data-texto="House."> House.</label><label class="option"><input type="radio" name="opcion" value="" data-texto="Children."> Children.</label><label class="option"><input type="radio" name="opcion" value="" data-texto="Chat."> Chat.</label>
+      </div>
+      <button onclick="siguiente()" style="display: inline-block;">Corregir</button>
+      <button id="reiniciar" onclick="reiniciarEstadisticas()">Reiniciar estadísticas</button>
+      <div id="resultado"></div>
+      <div class="estadisticas" id="estadisticas">✅ Aciertos: 0 | ❌ Fallos: 0 | 🎯 Porcentaje: 0% | 📋 Total: 86
+        preguntas</div>
+    </div>
+    <div class="card">
+      <h2>Listado de preguntas</h2>
+      <input type="text" id="search" placeholder="Busca aquí…"
+        style="width:100%; padding:0.8rem; margin-bottom:1rem; border-radius:6px; border:1px solid #ccc;">
+      <div id="question-list">
+        <div class="question-item" data-text="Selecciona la palabra que se corresponde con el fonema semivocálico /j/: jail ambas son correctas. Yale">
+  <h3>1. Selecciona la palabra que se corresponde con el fonema semivocálico /j/?</h3>
+  <ul>
+    <li class="">jail</li>
+    <li class="correct">ambas son correctas.</li>
+    <li class="">Yale</li>
+  </ul>
+</div>
+
+<div class="question-item" data-text="Rachel exchanged her old laptop for a ___; it was much easier to carry around. tablet fuse television">
+  <h3>2. Rachel exchanged her old laptop for a ___; it was much easier to carry around.?</h3>
+  <ul>
+    <li class="correct">tablet</li>
+    <li class="">fuse</li>
+    <li class="">television</li>
+  </ul>
+</div>
+
+<div class="question-item" data-text="If Peter ______ more, he would have passed the exam. had studied has study has studied">
+  <h3>3. If Peter ______ more, he would have passed the exam.?</h3>
+  <ul>
+    <li class="correct">had studied</li>
+    <li class="">has study</li>
+    <li class="">has studied</li>
+  </ul>
+</div>
+
+<div class="question-item" data-text="If I_____you, I would go to the party. had were was">
+  <h3>4. If I_____you, I would go to the party.?</h3>
+  <ul>
+    <li class="">had</li>
+    <li class="correct">were</li>
+    <li class="">was</li>
+  </ul>
+</div>
+
+<div class="question-item" data-text="_______you_____ to the park if it doesn’t rain? Might/went Will/go Did/go">
+  <h3>5. _______you_____ to the park if it doesn’t rain?</h3>
+  <ul>
+    <li class="">Might/went</li>
+    <li class="correct">Will/go</li>
+    <li class="">Did/go</li>
+  </ul>
+</div>
+
+<div class="question-item" data-text="Nothing has changed ___ my place of residence. likewise however except">
+  <h3>6. Nothing has changed ___ my place of residence.?</h3>
+  <ul>
+    <li class="">likewise</li>
+    <li class="">however</li>
+    <li class="correct">except</li>
+  </ul>
+</div>
+
+<div class="question-item" data-text="¿Cuál de las siguientes palabras se pronuncia con el sonido consonántico /k/? Ambas son correctas. Cake. Quiz.">
+  <h3>7. ¿Cuál de las siguientes palabras se pronuncia con el sonido consonántico /k/?</h3>
+  <ul>
+    <li class="correct">Ambas son correctas.</li>
+    <li class="">Cake.</li>
+    <li class="">Quiz.</li>
+  </ul>
+</div>
+
+<div class="question-item" data-text="If we miss the plane, we ______ by bus. might be had to go will go">
+  <h3>8. If we miss the plane, we ______ by bus.?</h3>
+  <ul>
+    <li class="">might be</li>
+    <li class="">had to go</li>
+    <li class="correct">will go</li>
+  </ul>
+</div>
+
+<div class="question-item" data-text="When does schwa sound occurs? Only reduced vowel sound of function words. Only unstressed syllables in multi-syllable words. Unstressed syllables in multi-syllable words and reduced vowel sound of function words.">
+  <h3>9. When does schwa sound occurs?</h3>
+  <ul>
+    <li class="">Only reduced vowel sound of function words.</li>
+    <li class="">Only unstressed syllables in multi-syllable words.</li>
+    <li class="correct">Unstressed syllables in multi-syllable words and reduced vowel sound of function words.</li>
+  </ul>
+</div>
+
+<div class="question-item" data-text="If Anna was taller, she _____ heels so much. have to wear wouldn’t wear must wear">
+  <h3>10. If Anna was taller, she _____ heels so much.?</h3>
+  <ul>
+    <li class="">have to wear</li>
+    <li class="correct">wouldn’t wear</li>
+    <li class="">must wear</li>
+  </ul>
+</div>
+
+<div class="question-item" data-text="If I______you, I would talk to her. were was has">
+  <h3>11. If I______you, I would talk to her.?</h3>
+  <ul>
+    <li class="correct">were</li>
+    <li class="">was</li>
+    <li class="">has</li>
+  </ul>
+</div>
+
+<div class="question-item" data-text="Indica cual de las siguientes palabras es homófona de 'hear': here. this. there.">
+  <h3>12. Indica cual de las siguientes palabras es homófona de 'hear'?</h3>
+  <ul>
+    <li class="correct">here.</li>
+    <li class="">this.</li>
+    <li class="">there.</li>
+  </ul>
+</div>
+
+<div class="question-item" data-text="Everybody looked at the ___ as the movie started. database mouse screen.">
+  <h3>13. Everybody looked at the ___ as the movie started.?</h3>
+  <ul>
+    <li class="">database</li>
+    <li class="">mouse</li>
+    <li class="correct">screen.</li>
+  </ul>
+</div>
+
+<div class="question-item" data-text="Laura works in a shop ___ in a factory. but as well as in addition">
+  <h3>14. Laura works in a shop ___ in a factory.?</h3>
+  <ul>
+    <li class="">but</li>
+    <li class="correct">as well as</li>
+    <li class="">in addition</li>
+  </ul>
+</div>
+
+<div class="question-item" data-text="Direct style: “Where do you live?”. Indirect style: She asked me where I lived. Indirect style: She said me where I lived. Indirect style: She said me if I lived.">
+  <h3>15. Direct style: “Where do you live?”.?</h3>
+  <ul>
+    <li class="correct">Indirect style: She asked me where I lived.</li>
+    <li class="">Indirect style: She said me where I lived.</li>
+    <li class="">Indirect style: She said me if I lived.</li>
+  </ul>
+</div>
+
+<div class="question-item" data-text="Direct style: “Be quick!”. Indirect style: She said me to be quick. Indirect style: She ordered me be quick. Indirect style: She ordered me to be quick.">
+  <h3>16. Direct style: “Be quick!”.?</h3>
+  <ul>
+    <li class="">Indirect style: She said me to be quick.</li>
+    <li class="">Indirect style: She ordered me be quick.</li>
+    <li class="correct">Indirect style: She ordered me to be quick.</li>
+  </ul>
+</div>
+
+<div class="question-item" data-text="Direct style: “She got married last year” Indirect style: She said she was married the previous year. Indirect style: She said me that she had got married the previous year. Indirect style: She told me that she had got married the previous year.">
+  <h3>17. Direct style: “She got married last year”?</h3>
+  <ul>
+    <li class="">Indirect style: She said she was married the previous year.</li>
+    <li class="">Indirect style: She said me that she had got married the previous year.</li>
+    <li class="correct">Indirect style: She told me that she had got married the previous year.</li>
+  </ul>
+</div>
+
+<div class="question-item" data-text="When you switch your tablet ___, you see a red light. with on up">
+  <h3>18. When you switch your tablet ___, you see a red light.?</h3>
+  <ul>
+    <li class="">with</li>
+    <li class="correct">on</li>
+    <li class="">up</li>
+  </ul>
+</div>
+
+<div class="question-item" data-text="It was getting dark, so Ann ___ the light on. switched. off ninguna es correcta.">
+  <h3>19. It was getting dark, so Ann ___ the light on.?</h3>
+  <ul>
+    <li class="correct">switched.</li>
+    <li class="">off</li>
+    <li class="">ninguna es correcta.</li>
+  </ul>
+</div>
+
+<div class="question-item" data-text="He___in the television and switched it on. ambas son correctas switched plugged">
+  <h3>20. He___in the television and switched it on.?</h3>
+  <ul>
+    <li class="">ambas son correctas</li>
+    <li class="">switched</li>
+    <li class="correct">plugged</li>
+  </ul>
+</div>
+
+<div class="question-item" data-text="Direct style: “Don’t do it!”. Indirect style: She told me to do it. Indirect style: She told me do it Indirect style: She ordered me not to do it.">
+  <h3>21. Direct style: “Don’t do it!”.?</h3>
+  <ul>
+    <li class="">Indirect style: She told me to do it.</li>
+    <li class="">Indirect style: She told me do it</li>
+    <li class="correct">Indirect style: She ordered me not to do it.</li>
+  </ul>
+</div>
+
+<div class="question-item" data-text="Una de las principales diferencias entre el inglés británico y el inglés americano es: no existen diferentes en el aspecto de la pronunciación de las semivocales. las diferencias en la pronunciación de las semivocales. las diferencias en la pronunciación del sonido consonántico /v/.">
+  <h3>22. Una de las principales diferencias entre el inglés británico y el inglés americano es?</h3>
+  <ul>
+    <li class="">no existen diferentes en el aspecto de la pronunciación de las semivocales.</li>
+    <li class="correct">las diferencias en la pronunciación de las semivocales.</li>
+    <li class="">las diferencias en la pronunciación del sonido consonántico /v/.</li>
+  </ul>
+</div>
+
+<div class="question-item" data-text="But ____ the life in Paris is pleasant and relaxed. apart from that likewise but">
+  <h3>23. But ____ the life in Paris is pleasant and relaxed.?</h3>
+  <ul>
+    <li class="correct">apart from that</li>
+    <li class="">likewise</li>
+    <li class="">but</li>
+  </ul>
+</div>
+
+<div class="question-item" data-text="The user entered an invalid ___. password. log on. reply.">
+  <h3>24. The user entered an invalid ___.?</h3>
+  <ul>
+    <li class="correct">password.</li>
+    <li class="">log on.</li>
+    <li class="">reply.</li>
+  </ul>
+</div>
+
+<div class="question-item" data-text="Check your inbox; I just sent you an important ___. password. inbox. email.">
+  <h3>25. Check your inbox; I just sent you an important ___.?</h3>
+  <ul>
+    <li class="">password.</li>
+    <li class="">inbox.</li>
+    <li class="correct">email.</li>
+  </ul>
+</div>
+
+<div class="question-item" data-text="I am writing to complain_____the poor service I have received_____your sales assistant. for/from about/from to/at">
+  <h3>26. I am writing to complain_____the poor service I have received_____your sales assistant.?</h3>
+  <ul>
+    <li class="">for/from</li>
+    <li class="correct">about/from</li>
+    <li class="">to/at</li>
+  </ul>
+</div>
+
+<div class="question-item" data-text="Choose the correct form: at summer. on summer. in summer.">
+  <h3>27. Choose the correct form?</h3>
+  <ul>
+    <li class="">at summer.</li>
+    <li class="">on summer.</li>
+    <li class="correct">in summer.</li>
+  </ul>
+</div>
+
+<div class="question-item" data-text="_______ to the administrator account that you will use to reset the forgotten password. Log on Reply Password">
+  <h3>28. _______ to the administrator account that you will use to reset the forgotten password.?</h3>
+  <ul>
+    <li class="correct">Log on</li>
+    <li class="">Reply</li>
+    <li class="">Password</li>
+  </ul>
+</div>
+
+<div class="question-item" data-text="I have ___my work to this email. inbox email attached">
+  <h3>29. I have ___my work to this email.?</h3>
+  <ul>
+    <li class="">inbox</li>
+    <li class="">email</li>
+    <li class="correct">attached</li>
+  </ul>
+</div>
+
+<div class="question-item" data-text="My brother bought a new car last week. A new car bought my brother. A new car buy my brother. A new car was bought by my brother last week.">
+  <h3>30. My brother bought a new car last week.?</h3>
+  <ul>
+    <li class="">A new car bought my brother.</li>
+    <li class="">A new car buy my brother.</li>
+    <li class="correct">A new car was bought by my brother last week.</li>
+  </ul>
+</div>
+
+<div class="question-item" data-text="Ella está casada con un periodista famoso. She is married at a famous journalist. She is married to a famous journalist. She is married with a famous journalist.">
+  <h3>31. Ella está casada con un periodista famoso.?</h3>
+  <ul>
+    <li class="">She is married at a famous journalist.</li>
+    <li class="correct">She is married to a famous journalist.</li>
+    <li class="">She is married with a famous journalist.</li>
+  </ul>
+</div>
+
+<div class="question-item" data-text="I would love ___ for dinner tonight. to go out going go">
+  <h3>32. I would love ___ for dinner tonight.?</h3>
+  <ul>
+    <li class="correct">to go out</li>
+    <li class="">going</li>
+    <li class="">go</li>
+  </ul>
+</div>
+
+<div class="question-item" data-text="I like ___ my homework on Sunday mornings. Ambas son correctas. doing to do">
+  <h3>33. I like ___ my homework on Sunday mornings.?</h3>
+  <ul>
+    <li class="correct">Ambas son correctas.</li>
+    <li class="">doing</li>
+    <li class="">to do</li>
+  </ul>
+</div>
+
+<div class="question-item" data-text="Selecciona el sonido semiconsonántico que se corresponde con la palabra 'you': /j/ Ninguna es correcta. /w/">
+  <h3>34. Selecciona el sonido semiconsonántico que se corresponde con la palabra 'you'?</h3>
+  <ul>
+    <li class="correct">/j/</li>
+    <li class="">Ninguna es correcta.</li>
+    <li class="">/w/</li>
+  </ul>
+</div>
+
+<div class="question-item" data-text="I love____clothes on sales. to buy buing buying">
+  <h3>35. I love____clothes on sales.?</h3>
+  <ul>
+    <li class="">to buy</li>
+    <li class="">buing</li>
+    <li class="correct">buying</li>
+  </ul>
+</div>
+
+<div class="question-item" data-text="I hate ____ my bedroom. tiding tidying to tidy">
+  <h3>36. I hate ____ my bedroom.?</h3>
+  <ul>
+    <li class="">tiding</li>
+    <li class="correct">tidying</li>
+    <li class="">to tidy</li>
+  </ul>
+</div>
+
+<div class="question-item" data-text="Selecciona el sonido semiconsonántico que se corresponde con la palabra 'jale': /w/ Ninguna es correcta. /j/">
+  <h3>37. Selecciona el sonido semiconsonántico que se corresponde con la palabra 'jale'?</h3>
+  <ul>
+    <li class="">/w/</li>
+    <li class="correct">Ninguna es correcta.</li>
+    <li class="">/j/</li>
+  </ul>
+</div>
+
+<div class="question-item" data-text="That restaurant ___ be very good. It's always empty. can't have to must">
+  <h3>38. That restaurant ___ be very good. It's always empty.?</h3>
+  <ul>
+    <li class="correct">can't</li>
+    <li class="">have to</li>
+    <li class="">must</li>
+  </ul>
+</div>
+
+<div class="question-item" data-text="He_____ be at the office, he starts at half past nine. will must to">
+  <h3>39. He_____ be at the office, he starts at half past nine.?</h3>
+  <ul>
+    <li class="">will</li>
+    <li class="correct">must</li>
+    <li class="">to</li>
+  </ul>
+</div>
+
+<div class="question-item" data-text="I _____be studying the whole weekend. I’ve got an exam next Monday. going will would">
+  <h3>40. I _____be studying the whole weekend. I’ve got an exam next Monday.?</h3>
+  <ul>
+    <li class="">going</li>
+    <li class="correct">will</li>
+    <li class="">would</li>
+  </ul>
+</div>
+
+<div class="question-item" data-text="Countries ____United States and Russia have competed in the past. such as for instance for example">
+  <h3>41. Countries ____United States and Russia have competed in the past.?</h3>
+  <ul>
+    <li class="correct">such as</li>
+    <li class="">for instance</li>
+    <li class="">for example</li>
+  </ul>
+</div>
+
+<div class="question-item" data-text="I studied for the exam, ___ I don't think I did well. likewise but except">
+  <h3>42. I studied for the exam, ___ I don't think I did well.?</h3>
+  <ul>
+    <li class="">likewise</li>
+    <li class="correct">but</li>
+    <li class="">except</li>
+  </ul>
+</div>
+
+<div class="question-item" data-text="I am plugging my ___ into an outlet to charge it. fuse television laptop">
+  <h3>43. I am plugging my ___ into an outlet to charge it.?</h3>
+  <ul>
+    <li class="">fuse</li>
+    <li class="">television</li>
+    <li class="correct">laptop</li>
+  </ul>
+</div>
+
+<div class="question-item" data-text="¿Cuál de las siguientes palabras se pronuncia con el sonido consonántico /h/? House. Chat. Children.">
+  <h3>44. ¿Cuál de las siguientes palabras se pronuncia con el sonido consonántico /h/?</h3>
+  <ul>
+    <li class="correct">House.</li>
+    <li class="">Chat.</li>
+    <li class="">Children.</li>
+  </ul>
+</div>
+
+<div class="question-item" data-text="I have made a digital copy of the document using a ___. plug hairdryer scanner">
+  <h3>45. I have made a digital copy of the document using a ___.?</h3>
+  <ul>
+    <li class="">plug</li>
+    <li class="">hairdryer</li>
+    <li class="correct">scanner</li>
+  </ul>
+</div>
+
+<div class="question-item" data-text="If you_____me, I would_____it. ask/had asked/has had asked/have done">
+  <h3>46. If you_____me, I would_____it.?</h3>
+  <ul>
+    <li class="">ask/had</li>
+    <li class="">asked/has</li>
+    <li class="correct">had asked/have done</li>
+  </ul>
+</div>
+
+<div class="question-item" data-text="An essay is: a short, formal piece of writing that deals with a single topic. to explain, in a detailed way, what people, places or objects are like. a spoken conversation that includes at least two characters.">
+  <h3>47. An essay is?</h3>
+  <ul>
+    <li class="correct">a short, formal piece of writing that deals with a single topic.</li>
+    <li class="">to explain, in a detailed way, what people, places or objects are like.</li>
+    <li class="">a spoken conversation that includes at least two characters.</li>
+  </ul>
+</div>
+
+<div class="question-item" data-text="If I ______the lottery, I would travel around the world. win would win won">
+  <h3>48. If I ______the lottery, I would travel around the world.?</h3>
+  <ul>
+    <li class="">win</li>
+    <li class="">would win</li>
+    <li class="correct">won</li>
+  </ul>
+</div>
+
+<div class="question-item" data-text="If he ______better English, he would move to London. spoke speak speaks">
+  <h3>49. If he ______better English, he would move to London.?</h3>
+  <ul>
+    <li class="correct">spoke</li>
+    <li class="">speak</li>
+    <li class="">speaks</li>
+  </ul>
+</div>
+
+<div class="question-item" data-text="¿Cuál de las siguientes palabras se pronuncia con el sonido consonántico /t/? The. Thefts. Tea.">
+  <h3>50. ¿Cuál de las siguientes palabras se pronuncia con el sonido consonántico /t/?</h3>
+  <ul>
+    <li class="">The.</li>
+    <li class="">Thefts.</li>
+    <li class="correct">Tea.</li>
+  </ul>
+</div>
+
+<div class="question-item" data-text="I need a ___ to recharge my phone's battery. plug toaster Ninguna es correcta">
+  <h3>51. I need a ___ to recharge my phone's battery.?</h3>
+  <ul>
+    <li class="correct">plug</li>
+    <li class="">toaster</li>
+    <li class="">Ninguna es correcta</li>
+  </ul>
+</div>
+
+<div class="question-item" data-text="The property has large terraces, ___ to a solarium. also in addition moreover">
+  <h3>52. The property has large terraces, ___ to a solarium.?</h3>
+  <ul>
+    <li class="">also</li>
+    <li class="correct">in addition</li>
+    <li class="">moreover</li>
+  </ul>
+</div>
+
+<div class="question-item" data-text="The dialogue is: to explain, in a detailed way, what people, places or objects are like. a spoken conversation that includes at least two characters. a short, formal piece of writing that deals with a single topic.">
+  <h3>53. The dialogue is?</h3>
+  <ul>
+    <li class="">to explain, in a detailed way, what people, places or objects are like.</li>
+    <li class="correct">a spoken conversation that includes at least two characters.</li>
+    <li class="">a short, formal piece of writing that deals with a single topic.</li>
+  </ul>
+</div>
+
+<div class="question-item" data-text="En la lengua inglesa existen palabras homófonas, que son: palabras que se escriben y tienen significados diferentes, pero suenan igual. palabras que, teniendo distintos grafemas, sus significantes son iguales, y por supuesto, su significado también. palabras que, teniendo los mismos grafemas, sus significantes son distintos, pero su significado es el mismo.">
+  <h3>54. En la lengua inglesa existen palabras homófonas, que son?</h3>
+  <ul>
+    <li class="correct">palabras que se escriben y tienen significados diferentes, pero suenan igual.</li>
+    <li class="">palabras que, teniendo distintos grafemas, sus significantes son iguales, y por supuesto, su significado también.</li>
+    <li class="">palabras que, teniendo los mismos grafemas, sus significantes son distintos, pero su significado es el mismo.</li>
+  </ul>
+</div>
+
+<div class="question-item" data-text="Direct style: “I’ll come and help you at twelve”. Indirect style: She told me that she would come and help me at twelve that day. Indirect style: She said me that she came and help me at twelve that day. Indirect style: She told me that she came and help me at twelve that day.">
+  <h3>55. Direct style: “I’ll come and help you at twelve”.?</h3>
+  <ul>
+    <li class="correct">Indirect style: She told me that she would come and help me at twelve that day.</li>
+    <li class="">Indirect style: She said me that she came and help me at twelve that day.</li>
+    <li class="">Indirect style: She told me that she came and help me at twelve that day.</li>
+  </ul>
+</div>
+
+<div class="question-item" data-text="Indica cual de las siguientes palabras es homófona de 'ate': eat. eight. eaten.">
+  <h3>56. Indica cual de las siguientes palabras es homófona de 'ate'?</h3>
+  <ul>
+    <li class="">eat.</li>
+    <li class="correct">eight.</li>
+    <li class="">eaten.</li>
+  </ul>
+</div>
+
+<div class="question-item" data-text="Indica cual de las siguientes palabras es homófona de 'marry': merry. Mary. married.">
+  <h3>57. Indica cual de las siguientes palabras es homófona de 'marry'?</h3>
+  <ul>
+    <li class="correct">merry.</li>
+    <li class="">Mary.</li>
+    <li class="">married.</li>
+  </ul>
+</div>
+
+<div class="question-item" data-text="Direct style: “We went to the cinema and then to a Chinese restaurant”. Indirect style: She ordered that they gone to the cinema and then to a Chinese restaurant. Indirect style: She said that they had gone to the cinema and then to a Chinese restaurant. Indirect style: She said that they gone to the cinema and then to a Chinese restaurant.">
+  <h3>58. Direct style: “We went to the cinema and then to a Chinese restaurant”.?</h3>
+  <ul>
+    <li class="">Indirect style: She ordered that they gone to the cinema and then to a Chinese restaurant.</li>
+    <li class="correct">Indirect style: She said that they had gone to the cinema and then to a Chinese restaurant.</li>
+    <li class="">Indirect style: She said that they gone to the cinema and then to a Chinese restaurant.</li>
+  </ul>
+</div>
+
+<div class="question-item" data-text="Direct Style: “Please get me a cup of tea”. Indirect Style: She asked to please get her a cup of tea. Indirect style: She asked me get her a cup of tea. Indirect style: She asked me to get her a cup of tea.">
+  <h3>59. Direct Style: “Please get me a cup of tea”.?</h3>
+  <ul>
+    <li class="">Indirect Style: She asked to please get her a cup of tea.</li>
+    <li class="">Indirect style: She asked me get her a cup of tea.</li>
+    <li class="correct">Indirect style: She asked me to get her a cup of tea.</li>
+  </ul>
+</div>
+
+<div class="question-item" data-text="En la lengua inglesa existen palabras homógrafas, que son: palabras que, teniendo los mismos grafemas, sus significantes son distintos, pero su significado es el mismo. palabras que se escriben del mismo modo pero cuyos significados son distintos. palabras que, teniendo distintos grafemas, sus significantes son iguales, y por supuesto, su significado también.">
+  <h3>60. En la lengua inglesa existen palabras homógrafas, que son?</h3>
+  <ul>
+    <li class="">palabras que, teniendo los mismos grafemas, sus significantes son distintos, pero su significado es el mismo.</li>
+    <li class="correct">palabras que se escriben del mismo modo pero cuyos significados son distintos.</li>
+    <li class="">palabras que, teniendo distintos grafemas, sus significantes son iguales, y por supuesto, su significado también.</li>
+  </ul>
+</div>
+
+<div class="question-item" data-text="Direct style: “Could you explain number four, please?”. Indirect style: She asked if I please could explain number four. Indirect style: She ordered if I please could explain number four. Indirect style: She claim me if I please could explain number four.">
+  <h3>61. Direct style: “Could you explain number four, please?”.?</h3>
+  <ul>
+    <li class="correct">Indirect style: She asked if I please could explain number four.</li>
+    <li class="">Indirect style: She ordered if I please could explain number four.</li>
+    <li class="">Indirect style: She claim me if I please could explain number four.</li>
+  </ul>
+</div>
+
+<div class="question-item" data-text="What is one official language in India? English is an official language in India. Both are incorrect. French is the official language in India.">
+  <h3>62. What is one official language in India?</h3>
+  <ul>
+    <li class="correct">English is an official language in India.</li>
+    <li class="">Both are incorrect.</li>
+    <li class="">French is the official language in India.</li>
+  </ul>
+</div>
+
+<div class="question-item" data-text="Sharon está muy contenta con su nuevo móvil. Sharon is very pleased for her new mobile. Sharon is very pleased with her new mobile. Sharon is very happy to her new mobile.">
+  <h3>63. Sharon está muy contenta con su nuevo móvil.?</h3>
+  <ul>
+    <li class="">Sharon is very pleased for her new mobile.</li>
+    <li class="correct">Sharon is very pleased with her new mobile.</li>
+    <li class="">Sharon is very happy to her new mobile.</li>
+  </ul>
+</div>
+
+<div class="question-item" data-text="The passive voice is used to: both are correct. give more importance to the object. give more importance to the subject.">
+  <h3>64. The passive voice is used to?</h3>
+  <ul>
+    <li class="">both are correct.</li>
+    <li class="correct">give more importance to the object.</li>
+    <li class="">give more importance to the subject.</li>
+  </ul>
+</div>
+
+<div class="question-item" data-text="'I am writing____relation____the job vacancy'. in/to to/at on/with">
+  <h3>65. 'I am writing____relation____the job vacancy'.?</h3>
+  <ul>
+    <li class="correct">in/to</li>
+    <li class="">to/at</li>
+    <li class="">on/with</li>
+  </ul>
+</div>
+
+<div class="question-item" data-text="El inglés americano tiende a: no tener diptongos. no doblar consonantes en los casos en los que el inglés británico las dobla. no escribir con mayúsculas al inicio de las oraciones.">
+  <h3>66. El inglés americano tiende a?</h3>
+  <ul>
+    <li class="">no tener diptongos.</li>
+    <li class="correct">no doblar consonantes en los casos en los que el inglés británico las dobla.</li>
+    <li class="">no escribir con mayúsculas al inicio de las oraciones.</li>
+  </ul>
+</div>
+
+<div class="question-item" data-text="Estoy harto de mi jefe. I am hungry from my boss. I am fed up with my boss. I am upset to my boss.">
+  <h3>67. Estoy harto de mi jefe.?</h3>
+  <ul>
+    <li class="">I am hungry from my boss.</li>
+    <li class="correct">I am fed up with my boss.</li>
+    <li class="">I am upset to my boss.</li>
+  </ul>
+</div>
+
+<div class="question-item" data-text="Es una característica del inglés americano: pronunciar el sonido consonántico /f/ de manera diferente. haber convertido los pasados de los verbos irregulares en regulares. los verbos irregulares no pueden convertirse en regulares ni si quiera por el uso del habla.">
+  <h3>68. Es una característica del inglés americano?</h3>
+  <ul>
+    <li class="">pronunciar el sonido consonántico /f/ de manera diferente.</li>
+    <li class="correct">haber convertido los pasados de los verbos irregulares en regulares.</li>
+    <li class="">los verbos irregulares no pueden convertirse en regulares ni si quiera por el uso del habla.</li>
+  </ul>
+</div>
+
+<div class="question-item" data-text="En cuanto al cambio en la escritura de los finales de palabras, podemos decir que: En inglés americano no existe el fonema /z/. en inglés americano no se pronuncian las 'eses' del final de las palabras. palabras que en inglés británico acaban en '-tre' el inglés americano las acaba en '-ter'.">
+  <h3>69. En cuanto al cambio en la escritura de los finales de palabras, podemos decir que?</h3>
+  <ul>
+    <li class="">En inglés americano no existe el fonema /z/.</li>
+    <li class="">en inglés americano no se pronuncian las 'eses' del final de las palabras.</li>
+    <li class="correct">palabras que en inglés británico acaban en '-tre' el inglés americano las acaba en '-ter'.</li>
+  </ul>
+</div>
+
+<div class="question-item" data-text="Estoy muy unida a mi hermana. I am very near with my sister. I am very close to my sister. I am very near to my sister.">
+  <h3>70. Estoy muy unida a mi hermana.?</h3>
+  <ul>
+    <li class="">I am very near with my sister.</li>
+    <li class="correct">I am very close to my sister.</li>
+    <li class="">I am very near to my sister.</li>
+  </ul>
+</div>
+
+<div class="question-item" data-text="Check your ___; I just sent you an important email. username password inbox">
+  <h3>71. Check your ___; I just sent you an important email.?</h3>
+  <ul>
+    <li class="">username</li>
+    <li class="">password</li>
+    <li class="correct">inbox</li>
+  </ul>
+</div>
+
+<div class="question-item" data-text="I _____call my teacher, I have a huge doubt. have to should to has to">
+  <h3>72. I _____call my teacher, I have a huge doubt.?</h3>
+  <ul>
+    <li class="correct">have to</li>
+    <li class="">should to</li>
+    <li class="">has to</li>
+  </ul>
+</div>
+
+<div class="question-item" data-text="___ rumors I've heard, he was fired for stealing from the company. For instance For example According to">
+  <h3>73. ___ rumors I've heard, he was fired for stealing from the company.?</h3>
+  <ul>
+    <li class="">For instance</li>
+    <li class="">For example</li>
+    <li class="correct">According to</li>
+  </ul>
+</div>
+
+<div class="question-item" data-text="Selecciona la palabra que se corresponde con el fonema semivocálico /w/: wool. ambas son correctas. quiet.">
+  <h3>74. Selecciona la palabra que se corresponde con el fonema semivocálico /w/?</h3>
+  <ul>
+    <li class="">wool.</li>
+    <li class="correct">ambas son correctas.</li>
+    <li class="">quiet.</li>
+  </ul>
+</div>
+
+<div class="question-item" data-text="You've been travelling all day. You ___ be very tired. must can't couldn't">
+  <h3>75. You've been travelling all day. You ___ be very tired.?</h3>
+  <ul>
+    <li class="correct">must</li>
+    <li class="">can't</li>
+    <li class="">couldn't</li>
+  </ul>
+</div>
+
+<div class="question-item" data-text="Formal letters are used for: formal communications. Both are correct. personal communications with friends or relatives.">
+  <h3>76. Formal letters are used for?</h3>
+  <ul>
+    <li class="correct">formal communications.</li>
+    <li class="">Both are correct.</li>
+    <li class="">personal communications with friends or relatives.</li>
+  </ul>
+</div>
+
+<div class="question-item" data-text="You_____study harder if you want to pass the exam. can't would should">
+  <h3>77. You_____study harder if you want to pass the exam.?</h3>
+  <ul>
+    <li class="">can't</li>
+    <li class="">would</li>
+    <li class="correct">should</li>
+  </ul>
+</div>
+
+<div class="question-item" data-text="When I was fifteen, I_____run for an hour without stopping. could can will">
+  <h3>78. When I was fifteen, I_____run for an hour without stopping.?</h3>
+  <ul>
+    <li class="correct">could</li>
+    <li class="">can</li>
+    <li class="">will</li>
+  </ul>
+</div>
+
+<div class="question-item" data-text="You____smoke here. It is forbidden. should can't can">
+  <h3>79. You____smoke here. It is forbidden.?</h3>
+  <ul>
+    <li class="">should</li>
+    <li class="correct">can't</li>
+    <li class="">can</li>
+  </ul>
+</div>
+
+<div class="question-item" data-text="I would hate ____the summer in Seville. to spend spending sppending">
+  <h3>80. I would hate ____the summer in Seville.?</h3>
+  <ul>
+    <li class="correct">to spend</li>
+    <li class="">spending</li>
+    <li class="">sppending</li>
+  </ul>
+</div>
+
+<div class="question-item" data-text="He answered the ___ when it was ringing. scanner television phone">
+  <h3>81. He answered the ___ when it was ringing.?</h3>
+  <ul>
+    <li class="">scanner</li>
+    <li class="">television</li>
+    <li class="correct">phone</li>
+  </ul>
+</div>
+
+<div class="question-item" data-text="The sound “B” is very similar to: “P”. “F”. “V”.">
+  <h3>82. The sound “B” is very similar to?</h3>
+  <ul>
+    <li class="correct">“P”.</li>
+    <li class="">“F”.</li>
+    <li class="">“V”.</li>
+  </ul>
+</div>
+
+<div class="question-item" data-text="Click on print and your document should come out of the ___. minguna es correcta. printer. mouse.">
+  <h3>83. Click on print and your document should come out of the ___.?</h3>
+  <ul>
+    <li class="">minguna es correcta.</li>
+    <li class="correct">printer.</li>
+    <li class="">mouse.</li>
+  </ul>
+</div>
+
+<div class="question-item" data-text="Direct style: “I’m leaving tomorrow”. Indirect style: She said she was leaving today. Indirect style: She said that she was leaving the following day. Indirect style: She said me that she was leaving the following day.">
+  <h3>84. Direct style: “I’m leaving tomorrow”.?</h3>
+  <ul>
+    <li class="">Indirect style: She said she was leaving today.</li>
+    <li class="correct">Indirect style: She said that she was leaving the following day.</li>
+    <li class="">Indirect style: She said me that she was leaving the following day.</li>
+  </ul>
+</div>
+
+<div class="question-item" data-text="Elsa is not here and, ___, she can say nothing. but and consequently">
+  <h3>85. Elsa is not here and, ___, she can say nothing.?</h3>
+  <ul>
+    <li class="">but</li>
+    <li class="">and</li>
+    <li class="correct">consequently</li>
+  </ul>
+</div>
+
+<div class="question-item" data-text="He likes______early in the morning. geting up getting up get up">
+  <h3>86. He likes______early in the morning.?</h3>
+  <ul>
+    <li class="">geting up</li>
+    <li class="correct">getting up</li>
+    <li class="">get up</li>
+  </ul>
+</div>
+
+      </div>
+    </div>
   </div>
-    <button onclick="siguiente()" style="display: inline-block;">Corregir</button>
-    <div id="resultado"></div>
-    <div class="estadisticas" id="estadisticas">✅ Aciertos: 3 | ❌ Fallos: 3 | 🎯 Porcentaje: 50% | 📋 Total: 89 preguntas</div>
-  </div>
+  <script src="./js.js"></script>
 
-  <script>
-    let totalPreguntasTotales = 0;
-    let preguntasOriginales = [];
-    let preguntas = [];
-    let falladas = [];
-    let index = 0;
-    let repeticionesFallos = {};
-    let aciertos = 0;
-    let totalRespondidas = 0;
+</body>
 
-    function normalizar(texto) {
-      return texto.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "").trim();
-    }
-
-    function mezclar(array) {
-      for (let i = array.length - 1; i > 0; i--) {
-        const j = Math.floor(Math.random() * (i + 1));
-        [array[i], array[j]] = [array[j], array[i]];
-      }
-    }
-
-    function actualizarEstadisticas() {
-  const porcentaje = totalRespondidas > 0 ? Math.round((aciertos / totalRespondidas) * 100) : 0;
-  document.getElementById("estadisticas").innerText =
-    `✅ Aciertos: ${aciertos} | ❌ Fallos: ${totalRespondidas - aciertos} | 🎯 Porcentaje: ${porcentaje}% | 📋 Total: ${totalPreguntasTotales} preguntas`;
-}
-
-    function guardarProgreso() {
-      const estado = {
-        preguntas,
-        falladas,
-        index,
-        repeticionesFallos,
-        aciertos,
-        totalRespondidas
-      };
-      localStorage.setItem("testSQL", JSON.stringify(estado));
-    }
-
-    function cargarProgreso() {
-      const guardado = localStorage.getItem("testSQL");
-      if (!guardado) return false;
-
-      try {
-        const estado = JSON.parse(guardado);
-        preguntas = estado.preguntas;
-        falladas = estado.falladas;
-        index = estado.index;
-        repeticionesFallos = estado.repeticionesFallos;
-        aciertos = estado.aciertos;
-        totalRespondidas = estado.totalRespondidas;
-        return true;
-      } catch {
-        return false;
-      }
-    }
-
-    function cargarPregunta() {
-      if (index >= preguntas.length) {
-        if (falladas.length > 0) {
-          preguntas = falladas.flatMap(p => Array((repeticionesFallos[p.pregunta] || 1) + 1).fill(p));
-          mezclar(preguntas);
-          falladas = [];
-          index = 0;
-          document.getElementById("resultado").innerText = "¡Repasemos las que fallaste!";
-          document.getElementById("resultado").className = "";
-        } else {
-          document.getElementById("pregunta").innerText = "🎉 ¡Test finalizado!";
-          document.getElementById("opciones").innerHTML = "";
-          document.querySelector("button").style.display = "none";
-          document.getElementById("resultado").innerText = "Buen trabajo.";
-          localStorage.removeItem("testSQL");
-          actualizarEstadisticas();
-          return;
-        }
-      }
-
-      const p = preguntas[index];
-      document.getElementById("pregunta").innerText = p.pregunta;
-
-      const opcionesMezcladas = [...p.opciones];
-      mezclar(opcionesMezcladas); // 🌀 Mezcla el orden de las opciones
-
-      document.getElementById("opciones").innerHTML = opcionesMezcladas.map(opcion => `
-    <label class="option">
-      <input type="radio" name="opcion" value="${opcion}"/> ${opcion}
-    </label>
-  `).join('');
-
-      document.querySelector("button").style.display = "inline-block";
-      document.getElementById("resultado").innerText = "";
-      const btn = document.querySelector("button");
-      btn.style.display = "inline-block";
-      btn.innerText = "Corregir";
-      btn.disabled = false;
-      estadoBoton = "corregir";
-    }
-
-
-    let estadoBoton = "corregir"; // "corregir" o "siguiente"
-
-    function siguiente() {
-      const btn = document.querySelector("button");
-
-      if (estadoBoton === "corregir") {
-        const seleccionada = document.querySelector('input[name="opcion"]:checked');
-        if (!seleccionada) {
-          alert("Selecciona una opción.");
-          return;
-        }
-
-        const respuesta = seleccionada.value;
-        const correcta = preguntas[index].respuesta;
-        const normalizadaCorrecta = normalizar(correcta);
-        const normalizadaRespuesta = normalizar(respuesta);
-
-        totalRespondidas++;
-
-        if (normalizadaCorrecta === normalizadaRespuesta) {
-          aciertos++;
-          document.getElementById("resultado").innerText = "✅ Correcto";
-          document.getElementById("resultado").className = "correcto";
-        } else {
-          document.getElementById("resultado").innerText = `❌ Incorrecto. Era: ${correcta}`;
-          document.getElementById("resultado").className = "incorrecto";
-          if (!falladas.some(p => p.pregunta === preguntas[index].pregunta)) {
-            falladas.push(preguntas[index]);
-            repeticionesFallos[preguntas[index].pregunta] = 1;
-          } else {
-            repeticionesFallos[preguntas[index].pregunta]++;
-          }
-        }
-
-        actualizarEstadisticas();
-        guardarProgreso();
-
-        btn.innerText = "Siguiente";
-        estadoBoton = "siguiente";
-
-        // Desactiva inputs para evitar cambiar de opción tras corregir
-        document.querySelectorAll('input[name="opcion"]').forEach(input => input.disabled = true);
-
-      } else if (estadoBoton === "siguiente") {
-        index++;
-        cargarPregunta();
-      }
-    }
-
-   async function iniciarTest() {
-  try {
-    const res = await fetch("preguntas.json");
-    preguntasOriginales = await res.json();
-    totalPreguntasTotales = preguntasOriginales.length;
-
-    const guardado = localStorage.getItem("testSQL");
-    if (guardado) {
-      const estado = JSON.parse(guardado);
-
-      // Cargamos progreso anterior
-      preguntas = estado.preguntas;
-      falladas = estado.falladas;
-      index = estado.index;
-      repeticionesFallos = estado.repeticionesFallos;
-      aciertos = estado.aciertos;
-      totalRespondidas = estado.totalRespondidas;
-
-      // Añadir nuevas preguntas si hay más en el JSON
-      const todasGuardadas = [...preguntas, ...falladas].map(p => p.pregunta);
-      const nuevas = preguntasOriginales.filter(p => !todasGuardadas.includes(p.pregunta));
-
-      if (nuevas.length > 0) {
-        preguntas = preguntas.concat(nuevas);
-        mezclar(preguntas); // Opcional: vuelve a mezclar para no poner nuevas al final
-      }
-
-    } else {
-      preguntas = [...preguntasOriginales];
-      mezclar(preguntas);
-    }
-
-    cargarPregunta();
-    actualizarEstadisticas();
-  } catch (error) {
-    document.getElementById("pregunta").innerText = "Error al cargar preguntas.json";
-    console.error(error);
-  }
-}
-    iniciarTest();
-  </script>
-
-
-</body></html>
+</html>
